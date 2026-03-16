@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure React Flow fills its container */
+.react-flow__renderer {
+  background: transparent;
+}
+
+/* Override React Flow default node styles so our custom nodes render cleanly */
+.react-flow__node {
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Smooth edge animations */
+.react-flow__edge-path {
+  transition: stroke 0.3s ease, stroke-width 0.3s ease;
+}

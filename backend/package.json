@@ -4,7 +4,7 @@
   "description": "Visual Workflow Automation Builder - Backend",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc",
+    "build": "prisma generate && tsc",
     "start": "node dist/server.js",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
@@ -15,6 +15,11 @@
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
     "@prisma/client": "^5.22.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.1",
+    "@types/nodemailer": "^6.4.17",
+    "@types/uuid": "^10.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
     "express": "^4.21.1",
@@ -23,17 +28,11 @@
     "pino": "^9.5.0",
     "pino-http": "^10.3.0",
     "pino-pretty": "^13.0.0",
+    "prisma": "^5.22.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
     "uuid": "^11.0.3",
     "zod": "^3.23.8"
   },
-  "devDependencies": {
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.10.1",
-    "@types/nodemailer": "^6.4.17",
-    "@types/uuid": "^10.0.0",
-    "prisma": "^5.22.0",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2"
-  }
+  "devDependencies": {}
 }
